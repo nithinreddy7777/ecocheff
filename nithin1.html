@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grocery Website</title>
+    <link rel="icon" type="image/avif" href="icon1.avif"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+<header class="header">
+        <img src="logo.jpg" alt="">
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#recipes">Recipes</a>
+            <a href="#categories">categories</a>
+            <a href="#products">products</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <span class="cart-count">0</span>
+        </div>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="shopping-cart">
+            <div class="cart-menu">
+                <p><b>my cart</b></p>
+                <div class="cart-items"></div>
+            </div>
+            <div class="sidebar--footer">
+                <div class="total--amount">
+                    <div class="cart-total">00.00Rs</div>
+                </div>
+                <a href="back.html" class="btn">Check out</a> 
+            </div>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Healthy Life In <span>Natural Food</span></h3>
+            <p>Daily Organic Delivery Of Your House</p>
+            <h1>Step into a world of organic delights with Ecocheff. Discover chef-inspired recipes and shop our premium organic products, all with a focus on health and sustainability.</h1>
+            <a href="#products" class="btn">shop now</a>
+        </div>
+    </section>
+    <section class="recipes" id="recipes">
+        <h1 class="heading"> our <span>Recipes</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="tiffin.jpg" alt="">
+                <h3>Tiffin Treats</h3>
+                <p>Crafting Tiffin Temptations</p>
+                <a href="file:///C:/Users/nnith/Downloads/New%20folder/nithin3.html#recipes" class="btn">Try now</a>
+            </div>
+            <div class="box">
+                <img src="lunch.jpg" alt="">
+                <h3>Midday meal</h3>
+                <p>Wholesome Midday Recipes</p>
+                <a href="#products" class="btn">Try now</a>
+            </div>
+            <div class="box">
+                <img src="diner1.jpg" alt="">
+                <h3>Dinner Delights</h3>
+                <p>Savor Night Recipes</p>
+                <a href="#products" class="btn">Try now</a>
+            </div>
+        </div>
+    </section>
+    <section class="categories" id="categories">
+        <h1 class="heading"> product <span>categories</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="vegetables.png" alt="">
+                <h3>Vegitables</h3>
+                <p>upto 30% off</p>
+                <a href="#products" class="btn">shop now</a>
+            </div>
+            <div class="box">
+                <img src="fruits.png" alt="">
+                <h3>Fresh fruits</h3>
+                <p>upto 27% off</p>
+                <a href="#products" class="btn">shop now</a>
+            </div>
+            <div class="box">
+                <img src="dairy products.png" alt=""> 
+                <h3>Dairy products</h3>
+                <p>upto 25% off</p>
+                <a href="#products" class="btn">shop now</a>
+            </div>
+        </div>
+    </section>
+    <section class="products" id="products">
+        <h1 class="heading">our <span>products</span> </h1>
+        <div class="box-container">
+            <div class="card--list"> 
+                <div class="box">
+                <div class="card" data-product-name="oranges" data-product-amount="100">
+                        <img src="oranges.jpg" alt="">
+                        <h3> Orange</h3>
+                        <div class="card--price">
+                            <div class="price">1kg-100Rs</div>
+                        </div>
+                        <button class="btn">add to cart </button>
+                        <img src="qr.jpg" alt="" class="qr-code">
+                </div>
+                </div>
+                <div class="box">
+                    <div class="card" data-product-name="Apples" data-product-amount="112">
+                            <img src="apples.jpg" alt="">
+                            <h3> Apples</h3>
+                            <div class="card--price">
+                                <div class="price">1kg-112Rs</div>
+                            </div>
+                            <button class="btn">add to cart </button>
+                            <img src="qr.jpg" alt="" class="qr-code">
+                    </div>
+                    </div>
+                    <div class="box">
+                        <div class="card" data-product-name="grapes" data-product-amount="60">
+                                <img src="grapes.jpg" alt="">
+                                <h3> Grapes</h3>
+                                <div class="card--price">
+                                    <div class="price">1kg-60Rs</div>
+                                </div>
+                                <button class="btn">add to cart </button>
+                                <img src="qr.jpg" alt="" class="qr-code">
+                        </div>
+                        </div>
+                        <div class="box">
+                            <div class="card" data-product-name="onion" data-product-amount="37">
+                                    <img src="onion.jpg" alt="">
+                                    <h3> Onion</h3>
+                                    <div class="card--price">
+                                        <div class="price">1kg-37Rs</div>
+                                    </div>
+                                    <button class="btn">add to cart </button>
+                                    <img src="qr.jpg" alt="" class="qr-code">
+                            </div>
+                            </div>
+                            <div class="box">
+                                <div class="card" data-product-name="watermelon" data-product-amount="65">
+                                        <img src="watermelon.jpg" alt="">
+                                        <h3> Watermelon</h3>
+                                        <div class="card--price">
+                                            <div class="price">1kg-65Rs</div>
+                                        </div>
+                                        <button class="btn">add to cart </button>
+                                        <img src="qr.jpg" alt="" class="qr-code">
+                                </div>
+                                </div>
+                                <div class="box">
+                                    <div class="card" data-product-name="tomato" data-product-amount="25">
+                                            <img src="tomato1.jpg" alt="">
+                                            <h3>Tomato</h3>
+                                            <div class="card--price">
+                                                <div class="price">1kg-25Rs</div> 
+                                            </div>
+                                            <button class="btn">add to cart </button>
+                                            <img src="qr.jpg" alt="" class="qr-code">
+                                    </div>
+                                    </div>
+                                            <div class="box">
+                                                <div class="card" data-product-name="Califlower" data-product-amount="125">
+                                                        <img src="califlower.jpg" alt="">
+                                                        <h3> Califlower</h3>
+                                                        <div class="card--price">
+                                                            <div class="price">1kg-125Rs</div>
+                                                        </div>
+                                                        <button class="btn">add to cart </button>
+                                                        <img src="qr.jpg" alt="" class="qr-code">
+                                                </div>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="card" data-product-name="sugar" data-product-amount="27"> 
+                                                            <img src="sugar1.jpg" alt="">
+                                                            <h3> Sugar</h3>
+                                                            <div class="card--price">
+                                                                <div class="price">1kg-27Rs</div>
+                                                            </div>
+                                                            <button class="btn">add to cart </button>
+                                                            <img src="qr.jpg" alt="" class="qr-code">
+                                                    </div>
+                                                    </div>
+                                                    <div class="box">
+                                                        <div class="card" data-product-name="Brinjal" data-product-amount="48"> 
+                                                                <img src="brinjal.jpg" alt="">
+                                                                <h3> Brinjal</h3>
+                                                                <div class="card--price">
+                                                                    <div class="price">1kg-48Rs</div>
+                                                                </div>
+                                                                <button class="btn">add to cart </button>
+                                                                <img src="qr.jpg" alt="" class="qr-code">
+                                                        </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <div class="card" data-product-name="sugar" data-product-amount="27"> 
+                                                                    <img src="sugar1.jpg" alt="">
+                                                                    <h3> Sugar</h3>
+                                                                    <div class="card--price">
+                                                                        <div class="price">1kg-27Rs</div>
+                                                                    </div>
+                                                                    <button class="btn">add to cart </button>
+                                                                    <img src="qr.jpg" alt="" class="qr-code">
+                                                            </div>
+                                                            </div>        
+            </div>
+        </div>
+    </section>
+    <section class="review" id="review">
+        <h1 class="heading"> customer's <span>review</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="nithinreview.jpg" alt="">
+                <h3>nithin</h3>
+                <p>Absolutely thrilled with my recent order from ECOCHEFF! The farm-fresh produce exceeded my expectations, and the user-friendly website made the whole experience a breeze. My go-to for quality and convenience!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="vineeth.jpg" alt="">
+                <h3>vineeth</h3>
+                <p>Impressed by the delivery and meticulous packaging. ECOCHEFF doesn't just deliver groceries; they deliver an exceptional service. The variety of locally sourced items is a game-changer. Highly recommend for a delightful shopping experience!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="satish.jpg" alt="">
+                <h3>satish</h3>
+                <p>From browsing to delivery, ECOCHEFF has set a new standard. The personalized recommendations made my shopping efficient, and the commitment to sustainability aligns perfectly with my values. A five-star experience all around!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blogs" id="blogs">
+        <h1 class="heading"> our <span>blogs</span></h1>
+        <div class="box-container">
+            <div class="box">
+            <img src="fresh fruits and vegetables1.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i>By nithin</a>
+                    <a href="#"> <i class="fas fa-calender"></i>27th july, 2022</a>
+                </div>
+                <h3>fresh and organic vegetables and fruits</h3>
+                <p>Explore the art of seasonal cooking on our blog, where we share mouthwatering recipes featuring the freshest produce from Groco. Join us on a culinary journey, discovering tips, tricks, and the joy of creating delicious meals right in your kitchen.</p>
+                <a href="file:///C:/Users/nnith/Downloads/New%20folder/nithin.html" class="btn">read more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="fruits and vegetables.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i>By vineeth</a>
+                    <a href="#"> <i class="fas fa-calender"></i>5th january, 2022</a>
+                </div>
+                <h3>fresh and organic vegetables and fruits</h3>
+                <p>Dive into the heart of sustainability with our latest blog post, uncovering the eco-friendly initiatives at Groco. From highlighting local farmers to reducing our environmental footprint, we're passionate about nourishing not only our customers but also the planet.</p>
+                <a href="file:///C:/Users/nnith/Downloads/New%20folder/nithin.html" class="btn">read more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="fresh vegetables.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i>By satish</a>
+                    <a href="#"> <i class="fas fa-calender"></i>28th august, 2022</a>
+                </div>
+                <h3>fresh and organic vegetables and fruits</h3>
+                <p>Discover the stories behind the products you love. Our blog takes you behind the scenes, showcasing the people and processes that make Groco a unique culinary destination. Join us in celebrating the vibrant tapestry of flavors and the communities that bring them to your table.</p>
+                <a href="file:///C:/Users/nnith/Downloads/New%20folder/nithin.html" class="btn">read more</a>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Ecocheff <i class="fas fa-shopping-basket"></i></h3>
+                <p> follow us on</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/NNITHINRED6145" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/_n_i_t_h_i_n_2774/" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>contact-info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +91 8555004633</a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +91 7207257125</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> eng22cs0376@dsu.edu.in</a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Bengaluru,india-560063</a>
+            </div>
+        </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script1.js" defer></script> 
+</body>
+</html> 

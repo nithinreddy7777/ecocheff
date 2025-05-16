@@ -1,0 +1,16 @@
+.box {
+    position: relative;
+}
+
+.box img.qr-code {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    display: none;
+}
+
+.box:hover img.qr-code {
+    display: block;
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grocery Website</title>
+    <link rel="icon" type="image/avif" href="icon1.avif"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style7.css">
+</head>
+<body>
+    <header class="header">
+        <img src="logo.jpg" alt="">
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#products">Tiffin</a>
+            <a href="#recipe">Lunch</a>
+            <a href="#products">Dinner</a>
+            <a href="#categories">categories</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <span>0</span>
+        </div>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form> 
+        <div class="shopping-cart">
+            <div class="sidebar-close"></div>
+            <div class="cart-menu">
+                <p><b>My Cart</b></p>
+                <div class="cart-items"></div>
+            </div>
+            <div class="sidebar--footer">
+                <div class="total--amount">
+                    <div class="cart-total">00.00Rs</div>
+                </div>
+                <a href="back.html" class="btn">Check out</a> 
+            </div>
+        </div>
+    </header>
+    <section class="home" id="home"> 
+        <div class="content">
+            <h3>Healthy Life In <span>Natural Food</span></h3>
+            <p>Daily Organic Delivery Of Your House</p>
+            <h1>Step into a world of organic delights with Ecocheff. Discover chef-inspired recipes and shop our premium organic products, all with a focus on health and sustainability.</h1>
+            <a href="#products" class="btn">shop now</a>
+        </div>
+    </section>
+    <section class="categories" id="categories">
+        <h1 class="heading"> product <span>categories</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="tiffin.jpg" alt="">
+                <h3>Tiffin Treats</h3>
+                <h2>Unlock 25% off on full recipe bundle!</h2>
+                <a href="#products" class="btn">Try now</a>
+            </div>
+            <div class="box">
+                <img src="lunch.jpg" alt="">
+                <h3>Midday meal</h3>
+                <h2>Unlock 25% off on full recipe bundle!</h2>
+                <a href="#products" class="btn">Try now</a>
+            </div>
+            <div class="box">
+                <img src="diner1.jpg" alt=""> 
+                <h3>Dinner Delights</h3>
+                <h2>Unlock 25% off on full recipe bundle!</h2>
+                <a href="#products" class="btn">Try now</a>
+            </div>
+        </div>
+    </section>
+    <section class="products" id="products"> 
+        <h1 class="heading">Tiffin <span>Recipes</span> </h1>
+        <div class="box-container">
+            <div class="card--list">
+                <div class="box">
+                    <div class="recipe" data-recipe="dosa" data-product-amount="159"> 
+                        <img src="dosa.jpg" alt="">
+                        <h2>Dosa</h2>
+                        <ul class="ingredients">
+                            <li>wheat flour <button class="add-item" data-product-amount="43">+</button></li> 
+                            <li>rice flour <button class="add-item" data-product-amount="39">+</button></li>
+                            <li>onion <button class="add-item" data-product-amount="29">+</button></li>
+                            <li>carrot <button class="add-item" data-product-amount="30">+</button></li>
+                            <li>green chilli <button class="add-item" data-product-amount="19">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/JD9mHQjuaNI?si=6QixfEvFEZMTR1Gb" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="poori" data-product-amount="90"> 
+                        <img src="pori.jpg" alt="">
+                        <h2>Poori</h2>
+                        <ul class="ingredients">
+                            <li>wheat flour <button class="add-item" data-product-amount="45">+</button></li>
+                            <li>salt <button class="add-item" data-product-amount="25">+</button></li>
+                            <li>oil <button class="add-item" data-product-amount="27">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/6TQodYm9xkg?si=6VLz-JX8pitbCQHW" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="puliyodhari" data-product-amount="550"> 
+                        <img src="puli.jpg" alt="">
+                        <h2>Puliyodhari</h2>
+                        <ul class="ingredients">
+                            <li>oil <button class="add-item" data-product-amount="27">+</button></li>
+                            <li>coriander seeds <button class="add-item" data-product-amount="150">+</button></li>
+                            <li>methi seeds <button class="add-item" data-product-amount="140">+</button></li>
+                            <li>mustard seeds <button class="add-item" data-product-amount="155">+</button></li>
+                            <li>peanuts <button class="add-item" data-product-amount="85">+</button></li> 
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/We8Kdc0cWGA?si=Bpe26Z60HCmo6CSS" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="idli" data-product-amount="100"> 
+                        <img src="idhli.jpg" alt="">
+                        <h2>Idli</h2>
+                        <ul class="ingredients">
+                            <li>Rice <button class="add-item" data-product-amount="23">+</button></li>
+                            <li>Urad Dal <button class="add-item" data-product-amount="160">+</button></li>
+                            <li>Fenugreek Seeds <button class="add-item" data-product-amount="199">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/Ayo80PIb-Qg?si=9ky3KWx9gSc7JgnI" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="upma" data-product-amount="179"> 
+                        <img src="upma.jpg" alt=""> 
+                        <h2>Upma</h2>
+                        <ul class="ingredients">
+                            <li>oil <button class="add-item" data-product-amount="27">+</button></li>
+                            <li>groundnuts <button class="add-item" data-product-amount="85">+</button></li>
+                            <li>green chillies <button class="add-item" data-product-amount="15">+</button></li>
+                            <li>onion <button class="add-item" data-product-amount="29">+</button></li>
+                            <li>tomato <button class="add-item" data-product-amount="25">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/J9HL8_Y5Jss?si=CZIa0TwfIeSi_tuc" class="links"> <i class="fab fa-youtube"></i>Recipe Video</a>
+                </div>
+            </div>
+        </div>
+        <h1 class="heading">Lunch <span>Recipes</span> </h1>
+        <div class="box-container">
+            <div class="card--list">
+                <div class="box">
+                    <div class="recipe" data-recipe="Mudde" data-product-amount="119"> 
+                        <img src="mudde.jpg" alt="">
+                        <h2>Mudde</h2>
+                        <ul class="ingredients">
+                            <li>Ragi Flour <button class="add-item" data-product-amount="89">+</button></li>
+                            <li>salt <button class="add-item" data-product-amount="25">+</button></li> 
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/B_e7MBBbZAQ?si=H8Es_UQGpYleSS5a" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="Lemon rice" data-product-amount="159"> 
+                        <img src="beetroot rice.png" alt="">
+                        <h2>Beetroot rice</h2>
+                        <ul class="ingredients">
+                            <li>Beetroot <button class="add-item" data-product-amount="45">+</button></li> 
+                            <li>oil <button class="add-item" data-product-amount="27">+</button></li>
+                            <li>Onions <button class="add-item" data-product-amount="29">+</button></li>
+                            <li>Salt <button class="add-item" data-product-amount="25">+</button></li>
+                            <li>mustard seeds <button class="add-item" data-product-amount="155">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/g27Un1Biwuw?si=2OAe77VB4BB9lo1F" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="Rasam" data-product-amount="90"> 
+                        <img src="rasam.jpg" alt="">
+                        <h2>Tomato Rasam</h2>
+                        <ul class="ingredients">
+                            <li>toor dal<button class="add-item" data-product-amount="199">+</button></li>
+                            <li>tomato <button class="add-item" data-product-amount="25">+</button></li>
+                            <li>oil <button class="add-item" data-product-amount="27">+</button></li>
+                            <li>mustard seeds <button class="add-item" data-product-amount="155">+</button></li>
+                            <li>salt <button class="add-item" data-product-amount="25">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/aZkof6PnuLE?si=GnYLfAP-94QfX4os" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="Vegetable Biryani" data-product-amount="550"> 
+                        <img src="Vegetable Biryani.png" alt="">
+                        <h2>Vegetable Biryani</h2>
+                        <ul class="ingredients">
+                            <li> rice <button class="add-item" data-product-amount="99">+</button></li>
+                            <li>oil <button class="add-item" data-product-amount="27">+</button></li>
+                            <li>coriander seeds <button class="add-item" data-product-amount="150">+</button></li>
+                            <li>methi seeds <button class="add-item" data-product-amount="140">+</button></li>
+                            <li>mustard seeds <button class="add-item" data-product-amount="155">+</button></li>
+                            <li>groundnuts <button class="add-item" data-product-amount="85">+</button></li> 
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/X4f6bv-Modg?si=A-wExzUXBrc1_PJy" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="Dal Makhani" data-product-amount="649"> 
+                        <img src="Dal Makhani.png" alt="">
+                        <h2>Dal Makhani</h2>
+                        <ul class="ingredients">
+                            <li>urad dal <button class="add-item" data-product-amount="160">+</button></li>
+                            <li>Redkidneybeans(400g) <button class="add-item" data-product-amount="419">+</button></li>
+                            <li>Tomato <button class="add-item" data-product-amount="25">+</button></li>
+                            <li>Onion  <button class="add-item" data-product-amount="29">+</button></li>
+                            <li>Salt <button class="add-item" data-product-amount="25">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/ca51e7nMI2g?si=zlwT19t7zmA1EF3L" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                
+            </div>
+        </div>
+        <h1 class="heading">Dinner <span>Recipes</span> </h1>
+        <div class="box-container">
+            <div class="card--list">
+                <div class="box">
+                    <div class="recipe" data-recipe="Lemon rice" data-product-amount="429"> 
+                        <img src="Lemon Rice.png" alt="">
+                        <h2>Lemon rice</h2>
+                        <ul class="ingredients">
+                            <li> rice <button class="add-item" data-product-amount="99">+</button></li>
+                            <li> lemon<button class="add-item" data-product-amount="40">+</button></li> 
+                            <li>peanuts <button class="add-item" data-product-amount="85">+</button></li>
+                            <li>urad dal <button class="add-item"  data-product-amount="160">+</button></li>
+                            <li>mustard seeds <button class="add-item"  data-product-amount="155">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/XpJdJmv0Ylk?si=bvTDtDml_-zxXttT" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="Curd rice" data-product-amount="499">  
+                        <img src="curd.jpg" alt="">
+                        <h2>Curd rice</h2>
+                        <ul class="ingredients">
+                            <li> rice <button class="add-item" data-product-amount="99">+</button></li>
+                            <li>mustard seeds <button class="add-item" data-product-amount="155">+</button></li>
+                            <li> urad dal <button class="add-item" data-product-amount="160">+</button></li>
+                            <li>oil <button class="add-item" data-product-amount="27">+</button></li>
+                            <li>pomegranate <button class="add-item" data-product-amount="99">+</button></li>
+                            <li>chana dal <button class="add-item" data-product-amount="59">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/VFpzansM-XM?si=aHYbtWbO_Nd3LODO" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="Mango rice" data-product-amount="278"> 
+                        <img src="Mango Rice.png" alt=""> 
+                        <h2>Mango rice</h2>
+                        <ul class="ingredients">
+                            <li> rice <button class="add-item" data-product-amount="99">+</button></li>
+                            <li>rawMango<button class="add-item" data-product-amount="69">+</button></li>
+                            <li>ChanaDal <button class="add-item" data-product-amount="89">+</button></li>
+                            <li>Peanuts <button class="add-item" data-product-amount="85">+</button></li>
+                            <li>Urad Dal <button class="add-item" data-product-amount="160">+</button></li>
+                            <li>Mustard Seeds <button class="add-item" data-product-amount="155">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/4xXl-KRv6A0?si=_SJ9zXFMt5dEoku7" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="Coconut Rice" data-product-amount="569"> 
+                        <img src="Coconut Rice.png" alt="">
+                        <h2>Coconut Rice</h2>
+                        <ul class="ingredients">
+                            <li> rice <button class="add-item" data-product-amount="99">+</button></li>
+                            <li>coconut <button class="add-item" data-product-amount="39">+</button></li>
+                            <li>Urad Dal <button class="add-item" data-product-amount="160">+</button></li>
+                            <li>Mustard seeds <button class="add-item" data-product-amount="155">+</button></li>
+                            <li>ChanaDal <button class="add-item" data-product-amount="89">+</button></li>
+                            <li>oil <button class="add-item" data-product-amount="27">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/Ry4BUn2Ku_g?si=boxq_9k8Gulv1kEq" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+                <div class="box">
+                    <div class="recipe" data-recipe="Palak Paneer" data-product-amount="227"> 
+                        <img src="Palak Paneer.png" alt=""> 
+                        <h2>Palak Paneer</h2>
+                        <ul class="ingredients">
+                            <li>Spinach Leaves<button class="add-item" data-product-amount="59">+</button></li>
+                            <li>Paneer(200g) <button class="add-item" data-product-amount="89">+</button></li>
+                            <li>Salt <button class="add-item" data-product-amount="25">+</button></li>
+                            <li>onion <button class="add-item" data-product-amount="29">+</button></li>
+                            <li>tomato <button class="add-item" data-product-amount="25">+</button></li>
+                        </ul>
+                        <button class="btn add-recipe">Add to Cart</button>
+                    </div>
+                    <a href="https://youtu.be/cRsAQeR5dbI?si=PYuvyg8eePdE_W2k" class="links"> <i class="fab fa-youtube"></i> Recipe Video</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./script8.js"></script> 
+</body>
+</html>

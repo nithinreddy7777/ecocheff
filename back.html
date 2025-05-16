@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="./back.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="logo.jpg" alt="Logo" />
+    <h1 class="checkout-heading">Checkout</h1>
+  </header>
+
+  <section class="checkout">
+    <!-- USER DETAILS -->
+    <div class="user-details box">
+      <h2>Enter Your Details</h2>
+      <form id="checkout-form">
+        <label for="name">Name*:</label>
+        <input type="text" id="name" required />
+        <label for="phone">Phone No*:</label>
+        <input type="tel" id="phone" required />
+        <label for="pincode">Pincode*:</label>
+        <input type="text" id="pincode" required />
+        <div class="address-row">
+          <div class="address-field">
+            <label for="house-no">House No*:</label>
+            <input type="text" id="house-no" required />
+          </div>
+          <div class="address-field">
+            <label for="floor-no">Floor No:</label>
+            <input type="text" id="floor-no" />
+          </div>
+        </div>
+        <label for="building-name">Building/Apartment Name*:</label>
+        <input type="text" id="building-name" required />
+        <label for="landmark">Landmark*:</label>
+        <input type="text" id="landmark" required />
+        <label for="state">State*:</label>
+        <input type="text" id="state" required />
+        <div class="address-type">
+          <div><input type="radio" name="address-type" value="work" required /> <label>Work</label></div>
+          <div><input type="radio" name="address-type" value="home" /> <label>Home</label></div>
+          <div><input type="radio" name="address-type" value="others" /> <label>Others</label></div>
+        </div>
+      </form>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="order-summary box">
+      <h2>Order Summary</h2>
+      <div class="cart-items">
+        <!-- Items can be added here dynamically if needed -->
+      </div>
+      <div class="total">
+        <h3>Total: <span class="cart-total">₹0.00</span> <span class="discount-text">(15% Discount)</span></h3>
+      </div>
+      <div class="discount">
+        <h3>You Saved: <span class="discount-amount">₹0.00</span></h3>
+      </div>
+      <div class="total-discounted">
+        <h3>Discounted Total: <span class="discounted-total">₹0.00</span></h3>
+      </div>
+      <div class="delivery-fee">
+        <h4>Delivery fee: <span style="color: green;">Free</span></h4>
+      </div>
+      <button type="button" class="btn" id="payment-btn">Make payment</button>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cartTotalElement = document.querySelector('.cart-total');
+      const discountAmountElement = document.querySelector('.discount-amount');
+      const discountedTotalElement = document.querySelector('.discounted-total');
+      const paymentButton = document.getElementById('payment-btn');
+
+      // Retrieve saved cart total from localStorage
+      const savedCartTotal = parseFloat(localStorage.getItem('cartTotal')) || 0;
+
+      // Apply 15% discount
+      const discountAmount = savedCartTotal * 0.15;
+      const finalAmount = savedCartTotal - discountAmount;
+
+      // Display amounts
+      cartTotalElement.textContent = `₹${savedCartTotal.toFixed(2)}`;
+      discountAmountElement.textContent = `₹${discountAmount.toFixed(2)}`;
+      discountedTotalElement.textContent = `₹${finalAmount.toFixed(2)}`;
+
+      // Store the final amount to localStorage to access in back1.html
+      localStorage.setItem('finalAmount', finalAmount.toFixed(2));
+      localStorage.setItem('discountAmount', discountAmount.toFixed(2));
+
+      // Redirect to back1.html on payment
+      paymentButton.addEventListener("click", () => {
+        window.location.href = "back1.html";
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.header {
+    color: black;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between; /* Arrange items horizontally with space between */
+    align-items: center;
+}
+
+.header img {
+    height: 40px; /* Adjust the height of the logo as needed */
+}
+
+.checkout-heading {
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center the text */
+    flex-grow: 1; /* Allow the text to grow and take up available space */
+}
+
+.checkout {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    margin: 2rem auto;
+    max-width: 850px;
+    padding: 0.25rem;
+}
+
+.user-details {
+    width: 70%; /* Adjust the width as needed */
+    padding: 1rem; /* Adjust padding */
+    margin-right: 2%; /* Add margin between the two boxes */
+}
+.order-summary {
+    width: 28%; /* Adjust the width as needed */
+    padding: 1rem; /* Adjust padding */
+    border: 1px solid #ccc; /* Add border */
+    transition: box-shadow 0.3s ease; 
+    max-width: 250px;/* Add transition for box-shadow */
+}
+
+.order-summary:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+}
+
+.checkout * {
+    color: black; /* Set text color to black */
+}
+
+.box {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h3,
+.order-summary h4 {
+    text-align: left; /* Align "Total" and "Delivery fee" text to the left */
+}
+
+.order-summary .cart-total,
+.order-summary h4 span {
+    display: inline-block; /* Display cart total and "Free" span inline */
+    margin-left: 0.5rem; /* Add margin between text and value */
+}
+
+
+.user-details label,
+.order-summary label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.user-details input,
+.user-details textarea,
+.order-summary input,
+.order-summary textarea {
+    width: 100%;
+    padding: 0.25rem; /* Reduced padding */
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.address-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.address-field {
+    flex: 1;
+}
+
+.address-type {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.address-type label {
+    font-weight: normal;
+}
+
+.address-type div {
+    display: flex;
+    align-items: center; /* Align radio button and text vertically */
+    gap: 0.5rem; /* Adjust the space between radio button and text */
+}
+
+.order-summary .cart-items {
+    margin-bottom: 1rem;
+}
+.order-summary h3 {
+    border-bottom: 1px solid black;
+    border-bottom: -1px solid black; /* Add a solid black line below the h3 element */
+}
+
+.order-summary .total {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1rem; /* Add margin between amount and total heading */
+    border-bottom: none; /* Remove border between amount and total */
+}
+
+.order-summary .total span {
+    margin-left: 0.5rem; /* Add margin between amount and "Free" */
+    padding-top: 0.25rem; /* Add padding above "Free" */
+    display: inline-block; /* Display "Free" inline */
+}
+
+
+.cart-total {
+    margin-left: 1rem; /* Add margin between "Total" and "cart-total" */
+}
+
+.order-summary h4 {
+    margin-top: -0.5rem; /* Add margin between "Total" and "Delivery fee" */
+}
+.order-summary .discount-text {
+    color: green; /* Sets the color of the discount text to green */
+    font-size: 0.7rem;  
+}
+.order-summary .btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.order-summary .btn:hover {
+    background-color: #28a745; /* Green color on hover */
+}
+
+.toggle-btn {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .checkout {
+        flex-direction: column; /* Change flex direction to column for smaller screens */
+    }
+
+    .user-details,
+    .order-summary {
+        width: 100%; /* Make both boxes occupy full width on smaller screens */
+        margin-bottom: 1rem; /* Add margin between boxes */
+    }
+
+    .address-row {
+        flex-direction: column;
+    }
+}

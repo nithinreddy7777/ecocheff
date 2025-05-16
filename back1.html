@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PAYMENT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="./back1.css" />
+  <style>
+    .container { max-width: 800px; margin: auto; padding: 20px; }
+    .box, .checkout, .header { margin-top: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+    .btn { margin-top: 15px; padding: 10px 20px; background: green; color: #fff; border: none; cursor: pointer; }
+    .payment-option { margin-bottom: 15px; }
+    .payment-option label, .payment-option img { margin-left: 10px; vertical-align: middle; }
+    .discounted-total { margin-top: 10px; font-weight: bold; font-size: 1.2em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="logo.jpg" alt="Logo" width="100"/>
+      <h1 class="checkout-heading">Payment</h1>
+    </header>
+
+    <section class="checkout">
+      <div class="order-summary box">
+        <h2>How do you want to pay?</h2>
+
+        <!-- Only showing discounted total -->
+        <div class="total-discounted">
+          <h3>Discounted Total: <span class="discounted-total">₹0.00</span></h3>
+        </div>
+
+        <form id="checkout-form">
+          <div class="payment-options">
+            <div class="payment-option">
+              <input type="radio" name="payment-method" value="paytm" required />
+              <img src="paytm-logo.png" alt="Paytm" width="50" />
+              <label>Pay via Paytm UPI</label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment-method" value="phonepe" />
+              <img src="phonepe-logo.png" alt="PhonePe" width="50" />
+              <label>Pay via PhonePe UPI</label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment-method" value="googlepay" />
+              <img src="googlepay-logo.png" alt="Google Pay" width="50" />
+              <label>Pay via Google Pay UPI</label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment-method" value="cod" />
+              <label>Cash on Delivery</label>
+            </div>
+          </div>
+
+          <div class="upi-id">
+            <label for="upi-id">Enter UPI ID:</label>
+            <input type="text" id="upi-id" placeholder="example@upi"/>
+          </div>
+
+          <button type="submit" class="btn" id="make-payment-btn">Make Payment</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let cartTotal = parseFloat(localStorage.getItem('cartTotal')) || 0;
+      const finalTotalElement = document.querySelector('.discounted-total');
+
+      function updateCartSummary() {
+        const discount = cartTotal * 0.15;
+        const discountedTotal = cartTotal - discount;
+        finalTotalElement.textContent = `₹${discountedTotal.toFixed(2)}`;
+      }
+
+      updateCartSummary();
+
+      document.getElementById('checkout-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const selectedMethod = document.querySelector('input[name="payment-method"]:checked');
+        const upiId = document.getElementById('upi-id').value;
+
+        if (!selectedMethod) {
+          alert('Please select a payment method.');
+          return;
+        }
+
+        if (selectedMethod.value !== 'cod' && upiId.trim() === '') {
+          alert('Please enter a valid UPI ID.');
+          return;
+        }
+
+        alert(`Payment successful using ${selectedMethod.value.toUpperCase()}`);
+        localStorage.removeItem('cartTotal');
+        window.location.href = 'thankyou.html';
+      });
+    });
+  </script>
+</body>
+</html>

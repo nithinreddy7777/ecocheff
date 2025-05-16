@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 550px; /* Increased the max-width */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.header img {
+    height: 70px; /* Increased logo size */
+    margin-right: 120px; /* Space between logo and heading */
+}
+
+.header .checkout-heading {
+    font-size: 2rem; /* Increased font size */
+    font-weight: bold;
+    text-align: center;
+}
+
+.total-discounted {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.total-discounted h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap between payment options */
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 20px; /* Increased padding */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.payment-option:hover {
+    background-color: #e9e9e9;
+}
+
+.payment-option img {
+    height: 50px; /* Increased icon size */
+    margin-right: 20px; /* Increased margin */
+}
+
+.payment-option label {
+    font-size: 1.5rem; /* Increased font size */
+    color: #333;
+    margin-left: 10px;
+}
+
+.upi-id {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upi-id label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.upi-id input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 15px; /* Increased padding for a larger button */
+    font-size: 1.2rem; /* Increased font size for better visibility */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Makes the button take the full width of its container */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.toggle-btn {
+    display: none;
+}
